@@ -84,6 +84,69 @@
             max-width: 700px;
             margin: 0 auto;
         }
+
+
+        .public-registration {
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        
+        .public-registration-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .public-registration-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ff6b00;
+        }
+        
+        .public-registration-content p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .registration-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 200px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #ff6b00;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .step h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
         
         .about {
             background-color: white;
@@ -249,6 +312,34 @@
             margin-bottom: 30px;
             font-size: 1.1rem;
         }
+
+        .location {
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        
+        .location-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .location-content p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .map-container {
+            margin: 30px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
         
         footer {
             background-color: #333;
@@ -335,6 +426,20 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+            
+            .map-container iframe {
+                height: 300px;
+            }
+            
+            .registration-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .step {
+                width: 100%;
+                max-width: 300px;
+            }
         }
     </style>
 </head>
@@ -343,10 +448,50 @@
         <div class="container">
             <h1>FELIZCAM 2025</h1>
             <p>Festa Literária de Camaçari</p>
-            <p>03 e 04 de Dezembro de 2025 | Cidade do Saber | EVENTO GRATUITO</p>            
+            <p>03 e 04 de Dezembro de 2025 | Cidade do Saber | EVENTO GRATUITO</p>
+            <a href="https://forms.gle/mQ4v12tq5VGfm1zg6" target="_blank" class="btn">Inscreva-se</a>            
         </div>
     </header>
     
+
+    <section class="public-registration" id="public-registration">
+        <div class="container">
+            <div class="section-title">
+                <h2>Inscrição para o Público</h2>
+                <p>Participe da FELIZCAM 2025</p>
+            </div>
+            
+            <div class="public-registration-content">
+                <h3>Garanta sua presença neste evento gratuito</h3>
+                <p>A FELIZCAM é um evento gratuito e aberto a todos os interessados em literatura, cultura e arte. Para garantir sua participação e receber informações atualizadas sobre a programação, faça sua inscrição através do formulário oficial.</p>
+                <br>
+                <p>Ao se inscrever, você terá acesso a todas as atividades do evento, incluindo palestras, apresentações artísticas, oficinas, lançamentos de livros e encontros com escritores locais e nacionais. Não perca a oportunidade de fazer parte desta celebração da cultura em Camaçari!</p>
+                
+                <div class="registration-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Preencha o Formulário</h4>
+                        <p>Acesse o formulário de inscrição e preencha com seus dados.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Receba Confirmação</h4>
+                        <p>Após a inscrição, você receberá um e-mail de confirmação.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Participe do Evento</h4>
+                        <p>Compareça à Cidade do Saber nos dias 03 e 04 de dezembro.</p>
+                    </div>
+                </div>
+                
+                <a href="https://forms.gle/mQ4v12tq5VGfm1zg6" target="_blank" class="btn">Inscreva-se Agora</a>
+            </div>
+        </div>
+    </section>
+
     <section class="about">
         <div class="container">
             <div class="section-title">
@@ -473,6 +618,24 @@
                 <p>Escritores de Camaçari que desejam comercializar e/ou lançar seus livros na FELIZCAM 2025 podem se inscrever através do formulário oficial. O evento ocorrerá nos dias 03 e 04 de dezembro de 2025, na Cidade do Saber.</p>
                 <p>Os lançamentos devem ter sido publicados entre janeiro de 2024 e outubro de 2025, com preferência para os lançados em 2025. As vagas são limitadas e sujeitas à capacidade do espaço.</p>
                 <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScBpWy2YKawqxYBgO3BeFnnJNqIz4eyDtcKp0PjesRbsbuXAg/viewform?usp=dialog" class="btn">Acesse o Formulário</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="location">
+        <div class="container">
+            <div class="section-title">
+                <h2>Como Chegar</h2>
+                <p>Localização do evento na Cidade do Saber <br>Endereço: R. do Telégrafo, s/n - Centro, Camaçari - BA, 42802-721</p>
+            </div>
+            
+            <div class="location-content">
+                <p>O evento será realizado na Cidade do Saber, em Camaçari. Venha participar desta celebração da literatura e cultura!</p>
+                <a href="https://maps.app.goo.gl/CjcJgknXXEd4kq4w8" target="_blank" class="btn">Ver no Google Maps</a>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9475394785756!2d-38.32341408518665!3d-12.6972989914166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7160495c5d1e5d5%3A0x4b5e5d5d5d5d5d5d!2sCidade%20do%20Saber!5e0!3m2!1spt-BR!2sbr!4v1635958471234!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
     </section>
