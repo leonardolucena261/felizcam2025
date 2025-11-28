@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FELIZCAM 2025 - Festa Literária de Camaçari</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imagem/589538716_17847115764610399_2247907999386154414_n.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #ff6b00;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #e55a00;
+            transform: translateY(-3px);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #ff6b00;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlights {
+            background-color: #f0f0f0;
+        }
+        
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .highlight-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .highlight-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .highlight-content {
+            padding: 20px;
+        }
+        
+        .highlight-content h3 {
+            color: #ff6b00;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .guardians {
+            background-color: white;
+        }
+        
+        .guardians-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .guardian-item {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .guardian-item:hover {
+            background-color: #ff6b00;
+            color: white;
+        }
+        
+        .guardian-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .guardian-item p {
+            font-size: 0.95rem;
+        }
+
+        .guardians-image {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .guardians-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .activities {
+            background-color: #f0f0f0;
+        }
+        
+        .activities-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .activity-item {
+            background-color: white;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .activity-item:hover {
+            background-color: #ff6b00;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .participation {
+            background-color: white;
+            text-align: center;
+        }
+        
+        .participation-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .participation-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ff6b00;
+        }
+        
+        .participation-content p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 50px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .footer-logo {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-logo h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ff6b00;
+        }
+        
+        .footer-links {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-links h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #ff6b00;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links ul li a:hover {
+            color: #ff6b00;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
+            header p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FELIZCAM 2025</h1>
+            <p>Festa Literária de Camaçari</p>
+            <p>03 e 04 de Dezembro de 2025 | Cidade do Saber | EVENTO GRATUITO</p>            
+        </div>
+    </header>
+    
+    <section class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que é a FELIZCAM?</h2>
+                <p>"Camaçari Educadora: histórias que conectam gerações"</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A FELIZCAM é a primeira festa literária de Camaçari, um evento que celebra a leitura, a arte, a cultura e a identidade local. Com o objetivo de promover, valorizar e fomentar a literatura na cidade, o evento busca contribuir para a formação leitora dos munícipes e fortalecer a imagem de Camaçari como uma Cidade Leitora.</p>
+                    <br>
+                    <p>Em dois dias de atividades gratuitas e abertas ao público, a FELIZCAM criará encontros entre leitores e autores, escolas e artistas, e entre os saberes populares e a literatura contemporânea. É a educação pulsando nas ruas e nos espaços culturais de Camaçari!</p>
+                </div>
+                <div class="about-image">
+                    <img src="imagem/79abfe3d-63a1-434f-b6ab-e948940b3d94_587661249_17847115773610399_6271424824697097220_n.jpg" alt="FELIZCAM - Celebrando a literatura em Camaçari">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="highlights">
+        <div class="container">
+            <div class="section-title">
+                <h2>Objetivos da FELIZCAM</h2>
+                <p>Um evento para transformar Camaçari em uma cidade mais leitora</p>
+            </div>
+            
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <img src="imagem/1a6a297e-b923-4594-ab3d-4cef76aca62c_587628623_17847116109610399_4662591385216575549_n.jpg" alt="Uma cidade inteira envolvida">
+                    <div class="highlight-content">
+                        <h3>Uma cidade inteira envolvida</h3>
+                        <p>O FELIZCAM projeto visa estimular o desenvolvimento regional, incentivar a leitura e valorizar os criadores culturais, aumentando a visibilidade da expressão literária e artística de Camaçari.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <img src="imagem/59d900bf-ca84-4228-8f9b-a83a2d328c47_589959651_17847116007610399_801830799845205139_n.jpg" alt="Criando encontros">
+                    <div class="highlight-content">
+                        <h3>Criando encontros</h3>
+                        <p>A FELIZCAM chega para criar conexões entre leitores e autores, escolas e artistas, e entre os saberes populares e a literatura contemporânea, fortalecendo a teia cultural da cidade.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <img src="imagem/cbc966dd-92a7-4e21-b8fc-7eed09389b42_589195252_17847116121610399_1380953672137566702_n.jpg?auth_key=1864188331-6af1b36195084228812ef8a10009afdc-0-4f4010679244f163a81666c7e08861b6" alt="Vem ser feliz">
+                    <div class="highlight-content">
+                        <h3>Vem ser feliz. Camaçari!</h3>
+                        <p>Um evento gratuito que celebra a alegria da leitura e da cultura, convidando toda a comunidade a participar de atividades que enriquecem e transformam vidas através da literatura.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <section class="guardians">
+    <div class="container">
+        <div class="section-title">
+            <h2>Guardiões da Tradição</h2>
+            <p>Homenageando aqueles que preservam a cultura de Camaçari</p>
+        </div>
+        
+        <div class="guardians-image">
+            <img src="imagem/588236046_17847116100610399_2466781426356644241_n.jpg" alt="Guardiões da Tradição - Cartaz da FELIZCAM">
+            <p class="image-caption">"A PRIMEIRA EDIÇÃO REVERÊNCIA NOSSOS GUARDIÕES DA TRADICÃO"</p>
+        </div>
+        
+        <div class="guardians-list">
+            <div class="guardian-item">
+                <h4>Bule - Bule</h4>
+                <p>Poeta, cantor e cordelista</p>
+            </div>
+            
+            <div class="guardian-item">
+                <h4>Dona Bete</h4>
+                <p>Dançarina da Chegança Feminina</p>
+            </div>
+            
+            <div class="guardian-item">
+                <h4>Mestra Nildes</h4>
+                <p>Representante de liderança do grupo Espermacete</p>
+            </div>
+            
+            <div class="guardian-item">
+                <h4>Seu Dadu</h4>
+                <p>Artesão da tradição griô e produtor agroecológico</p>
+            </div>
+            
+            <div class="guardian-item">
+                <h4>Mestre Careca</h4>
+                <p>Coordenador do Boi Estrela e referência da cultura das Cheganças</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <section class="activities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Programação</h2>
+                <p>Uma programação diversa, gratuita e aberta ao público</p>
+            </div>
+            
+            <div class="activities-list">
+                <div class="activity-item">Palestras</div>
+                <div class="activity-item">Apresentações artísticas</div>
+                <div class="activity-item">Oficinas e exposições</div>
+                <div class="activity-item">Lançamento de livros</div>
+                <div class="activity-item">Atividades infantis</div>
+                <div class="activity-item">Encontros com escritores</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="participation" id="participation">
+        <div class="container">
+            <div class="section-title">
+                <h2>Participe como Autor</h2>
+                <p>Inscreva-se para lançar ou comercializar seu livro na FELIZCAM 2025</p>
+            </div>
+            
+            <div class="participation-content">
+                <h3>Formulário de Interesse</h3>
+                <p>Escritores de Camaçari que desejam comercializar e/ou lançar seus livros na FELIZCAM 2025 podem se inscrever através do formulário oficial. O evento ocorrerá nos dias 03 e 04 de dezembro de 2025, na Cidade do Saber.</p>
+                <p>Os lançamentos devem ter sido publicados entre janeiro de 2024 e outubro de 2025, com preferência para os lançados em 2025. As vagas são limitadas e sujeitas à capacidade do espaço.</p>
+                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScBpWy2YKawqxYBgO3BeFnnJNqIz4eyDtcKp0PjesRbsbuXAg/viewform?usp=dialog" class="btn">Acesse o Formulário</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>FELIZCAM 2025</h3>
+                    <p>Festa Literária de Camaçari</p>
+                    <p>03 e 04 de Dezembro de 2025</p>
+                    <p>Cidade do Saber</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Realização</h4>
+                    <ul>
+                        <li><a target="_blank" href="www.camacari.ba.gov.br/">Prefeitura de Camaçari</a></li>
+                        <li><a target="_blank" href="https://seduc.camacari.ba.gov.br/">Secretaria de Educação</a></li>
+                        <li><a href="https://secult.camacari.ba.gov.br/">Secretaria de Cultura</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Informações</h4>
+                    <ul>
+                        <li><a href="mailto:comunicacaosecultcamacari@gmail.com?subject=Dúvida(s) sobre a FELIZCAM 2025">comunicacaosecultcamacari@gmail.com</a></li>                      
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 FELIZCAM - Todos os direitos reservados. Prefeitura de Camaçari.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
