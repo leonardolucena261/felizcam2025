@@ -340,6 +340,63 @@
             height: 400px;
             border: none;
         }
+
+         .videos {
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .video-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            padding-bottom: 130%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            
+        }
+        
+        .video-thumbnail iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-info {
+            padding: 20px;
+            text-align: left;
+        }
+        
+        .video-info h3 {
+            color: #ff6b00;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .video-info p {
+            font-size: 0.95rem;
+            color: #666;
+        }
         
         footer {
             background-color: #333;
@@ -635,6 +692,47 @@
                 
                 <div class="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9475394785756!2d-38.32341408518665!3d-12.6972989914166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7160495c5d1e5d5%3A0x4b5e5d5d5d5d5d5d!2sCidade%20do%20Saber!5e0!3m2!1spt-BR!2sbr!4v1635958471234!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="videos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Vídeos Promocionais</h2>
+                <p>Conheça mais sobre a FELIZCAM 2025</p>
+            </div>
+            
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe src="video/AFelizcampulsaliteraturaarteepoesiaAprimeiraedicaodaFELIZCAMFestaLiterariadeCama.mp4" title="FELIZCAM 2025 - Apresentação Oficial" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Apresentação Oficial</h3>
+                        <p>Conheça a primeira edição da FELIZCAM, a festa literária que celebra a cultura e a identidade de Camaçari.</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe src="video/OquevocêvaiencontrarnaFELIZCAMUmacidadeinteirarespirandoliteraturaarteeculturapop.mp4" title="FELIZCAM 2025 - Entrevista com os Guardiões" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Mais um pouco sobre a FELIZCAM</h3>
+                        <p>A primeira edição fala sobre a importância de preservar a cultura de Camaçari.</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe src="video/AfrocidadetanaareaElogomaisvaitanopalcoMestreDaduaquinaCidadedoSaber.mp4" title="FELIZCAM 2025 - Making Of" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Making Of</h3>
+                        <p>Um pouco do rolou nos bastidores da primeira edição da FELIZCAM 2025.</p>
+                    </div>
                 </div>
             </div>
         </div>
